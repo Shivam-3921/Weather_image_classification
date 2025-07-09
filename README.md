@@ -31,7 +31,7 @@ The dataset consists of labeled folders of weather images, with classes such as 
    - Normalize using standard mean and std values
 
 2. **Model Architecture**:
-   - Two convolutional layers with ReLU activations and max pooling
+   - Two convolutional layers and max pooling
    - Dropout applied after convolutional and dense layers
    - Fully connected layers for classification
 
@@ -39,17 +39,7 @@ The dataset consists of labeled folders of weather images, with classes such as 
    - Loss: CrossEntropyLoss
    - Optimizer: Adam
    - Metric: Accuracy on training, validation, and test sets
-   - Early stopping based on validation performance
    - Hyperparameter tuning via grid search
-
----
-
-## Results
-
-- Final training accuracy: **~95%**
-- Best validation accuracy after tuning: **~71%**
-- Test accuracy: **~70%**
-- Confusion matrix analysis revealed class confusion between foggy and cloudy classes
 
 ---
 
