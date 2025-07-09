@@ -1,4 +1,4 @@
-# 🌦️ Weather Image Classification using CNN
+# Weather Image Classification using CNN
 
 This project focuses on classifying weather conditions from images using Convolutional Neural Networks (CNNs). While traditional weather classification relies on sensor data or manual observation, this project demonstrates that visual cues from weather imagery can be used effectively to train a deep learning model that predicts weather types such as cloudy, foggy, rainy, snowy, and sunny.
 
@@ -47,13 +47,4 @@ The dataset consists of labeled folders of weather images, with classes such as 
 
 - `weather_prediction.ipynb`: The main notebook containing the entire workflow from preprocessing to evaluation
 - `dataset/`: Contains subfolders of weather images organized by class (e.g., `cloudy/`, `foggy/`, etc.)
-
----
-
-## Future Work
-
-- Incorporate pre-trained models like ResNet or EfficientNet for better performance
-- Address class imbalance using weighted loss functions or oversampling
-- Deploy the trained model as a web app or mobile interface for real-time weather recognition
-
 ---
