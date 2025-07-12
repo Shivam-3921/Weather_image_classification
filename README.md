@@ -6,7 +6,7 @@ This project focuses on classifying weather conditions from images using Convolu
 
 ## Project Overview
 
-The project focuses on building a CNN trained on labeled weather images to perform multi-class classification. The model learns visual patterns in the images such as cloud shapes, light conditions, and textures that distinguish one weather class from another. To improve performance and reduce overfitting, data augmentation, and dropout regularization are used.
+The project focuses on building a CNN trained on labeled weather images to perform multi-class classification. The model learns visual patterns in the images, such as cloud shapes, light conditions, and textures that distinguish one weather class from another. To improve performance and reduce overfitting, data augmentation and dropout regularization are used. Additionally, a ResNet18 model was implemented using transfer learning, which achieved significantly higher accuracy compared to the custom CNN while maintaining a similar training time.
 
 Key steps include:
 - **Image preprocessing**: Resize, normalize, and augment input images
