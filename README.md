@@ -12,14 +12,14 @@ Key steps include:
 - **Image preprocessing**: Resize, normalize, and augment input images
 - **Model design**: CNN with two convolutional layers followed by fully connected layers
 - **Training**: Optimized using the Adam optimizer with cross-entropy loss
-- **Hyperparameter tuning**: Various combinations of dropout, learning rate, and filter sizes tested
+- **Hyperparameter tuning**: Various combinations of dropout and learning rate tested
 - **Evaluation**: Accuracy and confusion matrix on test set
 
 ---
 
 ## Data Collection
 
-The dataset consists of labeled folders of weather images, with classes such as `cloudy`, `foggy`, `rain`, `shine`, and `snow`. The images were downloaded from publicly available repositories and vary in size and quality. To ensure consistency during training, all images are resized to 128×128 resolution and normalized using ImageNet mean and standard deviation values.
+The dataset consists of labeled folders of weather images, with classes such as `cloudy`, `foggy`, `rain`, `shine`, and `snow`. The images were downloaded from publicly available repositories and vary in size and quality. To ensure consistency during training, all images are resized to 160x160 resolution and normalized using ImageNet mean and standard deviation values.
 
 ---
 
@@ -32,8 +32,10 @@ The dataset consists of labeled folders of weather images, with classes such as 
 
 2. **Model Architecture**:
    - Two convolutional layers and max pooling
-   - Dropout applied after convolutional and dense layers
+   - Batch normalization for regularization
    - Fully connected layers for classification
+   - Dropout applied after dense layers
+   
 
 3. **Training Strategy**:
    - Loss: CrossEntropyLoss
@@ -48,3 +50,7 @@ The dataset consists of labeled folders of weather images, with classes such as 
 - `weather_prediction.ipynb`: The main notebook containing the entire workflow from preprocessing to evaluation
 - `dataset/`: Contains subfolders of weather images organized by class (e.g., `cloudy/`, `foggy/`, etc.)
 ---
+
+## Conclusion
+
+Transfer learning is a powerful technique in image classification, where we freeze the layers of a pretrained model (here ResNet-18) and train only the final layer. This approach achieves significantly better results than a custom CNN, as demonstrated in the Jupyter notebook.
